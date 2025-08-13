@@ -1,0 +1,63 @@
+
+
+while True:
+    print("\nChoose a question to run:")
+    print("16. Password Strength Check")
+    print("17. Learning Rate Halving")
+    print("18. Count Even Labels")
+    print("19. Increase Accuracy")
+    print("20. Marks Classification")
+    print("0. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "16":
+        # Q16 - Password Strength Check
+        password = input("Enter password: ")
+        if len(password) >= 8:
+            if "AI" in password:
+                print("Strong Password")
+            else:
+                print("Weak Password")
+        else:
+            print("Invalid Password")
+
+    elif choice == "17":
+        # Q17 - Learning Rate Halving
+        learning_rate = 0.1
+        while learning_rate > 0.001:
+            print("Learning rate:", learning_rate)
+            learning_rate = learning_rate / 2
+
+    elif choice == "18":
+        # Q18 - Count Even Labels
+        dataset_labels = int(input("Enter number of labels: "))
+        count = 1
+        while count <= dataset_labels:
+            if count % 2 == 0:
+                print(count)
+            count += 1
+
+    elif choice == "19":
+        # Q19 - Increase Accuracy
+        accuracy = 50
+        while accuracy < 95:
+            accuracy += 5
+            print("Current Accuracy:", accuracy, "%")
+
+    elif choice == "20":
+        # Q20 - Marks Classification
+        marks = int(input("Enter marks (0-100): "))
+        if marks >= 80:
+            print("AI Expert")
+        elif marks >= 60:
+            print("AI Learner")
+        else:
+            print("Needs Improvement")
+
+    elif choice == "0":
+        print("Exiting program...")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
