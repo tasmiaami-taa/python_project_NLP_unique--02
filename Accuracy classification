@@ -1,0 +1,11 @@
+
+accuracy = float(input("Enter accuracy (0-100): "))
+
+if accuracy >= 90:
+    print("Excellent Model")
+elif accuracy >= 70 and accuracy <= 89:
+    print("Good Model")
+elif accuracy >= 50 and accuracy <= 69:
+    print("Average Model")
+else:
+    print("Poor Model")
