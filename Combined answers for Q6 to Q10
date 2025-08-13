@@ -1,0 +1,83 @@
+
+while True:
+    print("\nChoose a question to run:")
+    print("6. Conference Eligibility")
+    print("7. Model Deployment Check")
+    print("8. Dataset Quality Check")
+    print("9. Data Usability Check")
+    print("10. Model Selection")
+    print("0. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "6":
+        # Q6 - Conference Eligibility
+        age = int(input("Enter age: "))
+        papers = int(input("Enter number of published papers: "))
+        if age >= 18:
+            if papers >= 2:
+                print("Eligible for Talk")
+            else:
+                print("Eligible for Attendee only")
+        else:
+            print("Not Eligible")
+
+    elif choice == "7":
+        # Q7 -  Check
+        accuracy = float(input("Enter accuracy: "))
+        latency = float(input("Enter latency (ms): "))
+        if accuracy >= 85:
+            if latency <= 100:
+                print("Ready for Production")
+            else:
+                print("Needs Optimization")
+        else:
+            print("Not Suitable for Deployment")
+
+    elif choice == "8":
+        # Q8 - Dataset Quality Check
+        samples = int(input("Enter number of samples: "))
+        missing = float(input("Enter percentage of missing values: "))
+        if samples >= 1000:
+            if missing <= 5:
+                print("Good Dataset")
+            else:
+                print("Needs Cleaning")
+        else:
+            print("Insufficient Data")
+
+    elif choice == "9":
+        # Q9 - Data Usability Check
+        data_source = input("Enter data source (public/private): ").lower()
+        consent = input("Is consent given? (yes/no): ").lower()
+        if data_source == "public":
+            print("Usable Data")
+        else:
+            if consent == "yes":
+                print("Usable Data")
+            else:
+                print("Ethical Issue")
+
+    elif choice == "10":
+        # Q10 - Model Selection
+        problem_type = input("Enter problem type (classification/regression): ").lower()
+        dataset_size = int(input("Enter dataset size: "))
+        if problem_type == "classification":
+            if dataset_size <= 5000:
+                print("Logistic Regression")
+            else:
+                print("Neural Network")
+        elif problem_type == "regression":
+            if dataset_size <= 10000:
+                print("Linear Regression")
+            else:
+                print("XGBoost")
+        else:
+            print("Invalid problem type")
+
+    elif choice == "0":
+        print("Exiting program...")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
