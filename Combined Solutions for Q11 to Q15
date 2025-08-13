@@ -1,0 +1,58 @@
+
+
+while True:
+    print("\nChoose a question to run:")
+    print("11. Loss Reduction Loop")
+    print("12. Simple Chatbot")
+    print("13. Counting to Dataset Size")
+    print("14. Training Epochs")
+    print("15. Keep Dividing by 2")
+    print("0. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "11":
+        # Q11 - Loss Reduction Loop
+        loss = float(input("Enter initial loss value: "))
+        while loss > 0.1:
+            loss = loss - 0.05
+            print("Loss:", loss)
+
+    elif choice == "12":
+        # Q12 - Simple Chatbot
+        while True:
+            user_input = input("You: ")
+            if user_input.lower() == "exit":
+                break
+            print("Bot: I am learning...")
+
+    elif choice == "13":
+        # Q13 - Counting to Dataset Size
+        dataset_size = int(input("Enter dataset size: "))
+        count = 1
+        while count <= dataset_size:
+            count += 1
+        print("Final count:", count - 1)
+
+    elif choice == "14":
+        # Q14 - Training Epochs
+        total_epochs = int(input("Enter total epochs: "))
+        epoch = 1
+        while epoch <= total_epochs:
+            print("Training epoch", epoch)
+            epoch += 1
+
+    elif choice == "15":
+        # Q15 - Keep Dividing by 2
+        number = float(input("Enter a number: "))
+        while number > 1:
+            print(number)
+            number = number / 2
+        print(number)
+
+    elif choice == "0":
+        print("Exiting program...")
+        break
+
+    else:
+        print("Invalid choice. Please try again.")
