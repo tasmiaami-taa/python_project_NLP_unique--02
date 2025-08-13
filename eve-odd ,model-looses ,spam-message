@@ -1,0 +1,29 @@
+#Even or Odd dataset size
+
+dataset_size = int(input("Enter dataset size: "))
+
+if dataset_size % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+
+# Compare model losses
+model_1_loss = float(input("Enter loss for Model 1: "))
+model_2_loss = float(input("Enter loss for Model 2: "))
+
+if model_1_loss < model_2_loss:
+    print("Model 1 performs better")
+elif model_2_loss < model_1_loss:
+    print("Model 2 performs better")
+else:
+    print("Both models perform equally")
+
+
+# Spam message check
+message = input("Enter a message: ").lower()
+
+if "offer" in message or "free" in message:
+    print("Spam Message")
+else:
+    print("Not Spam")
